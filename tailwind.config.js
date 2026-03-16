@@ -10,6 +10,9 @@ export default {
                 navy: '#1B2E4B',
                 'warm-white': '#FAFAF7',
                 'fnu-gold': '#C9A84C',
+                'soft-blue': '#E6F0FF',
+                'primary-blue': '#3B82F6',
+                'teal-glow': '#2DD4BF',
             },
             fontFamily: {
                 display: ['"Playfair Display"', 'serif'],

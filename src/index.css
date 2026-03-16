@@ -4,9 +4,54 @@
 
 @layer base {
   body {
-    @apply bg-warm-white text-navy font-body antialiased;
+    @apply bg-[#F0F5FA] text-navy font-body antialiased selection:bg-primary-blue selection:text-white;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-black;
+  }
+}
+
+@layer components {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .rotate-y-2 {
+    transform: rotateY(2deg);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-soft-blue/20 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-soft-blue rounded-full hover:bg-primary-blue/30 transition-all;
+  }
+}
+
+/* Custom animations for the stepper */
+.animate-in {
+  animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
